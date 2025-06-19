@@ -43,8 +43,22 @@ Esta entrega faz parte do módulo de desenvolvimento de aplicações web, deskto
 Você pode visualizar o código-fonte neste repositório.  
 A interface pode ser testada abrindo o arquivo `index.html` em qualquer navegador.
 
-## Banco de Dados
-O arquivo com a modelagem e manipulação do banco de dados está disponível em: [modelagem.sql](./modelagem.sql)
+## Estrutura do Banco de Dados
+
+O banco de dados é composto pelas seguintes tabelas principais:
+
+- **Usuario**: cadastro de participantes do sistema;
+- **Local**: informações sobre os locais onde os projetos acontecem;
+- **Projeto**: dados dos projetos ambientais;
+- **Participacao**: relação entre usuários e projetos, com definição do papel de cada participante;
+- **Atividade**: registro das atividades realizadas dentro de cada projeto.
+
+## Como usar
+
+1. Execute o script `schema.sql` para criar as tabelas do banco de dados.
+2. Utilize o arquivo `manipulacao.sql` para inserir dados de exemplo e realizar consultas.
+3. O projeto está versionado no GitHub para controle e histórico das alterações.
+
 
 
 ---
