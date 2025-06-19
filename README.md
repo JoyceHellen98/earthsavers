@@ -43,6 +43,10 @@ Esta entrega faz parte do módulo de desenvolvimento de aplicações web, deskto
 Você pode visualizar o código-fonte neste repositório.  
 A interface pode ser testada abrindo o arquivo `index.html` em qualquer navegador.
 
+## Banco de Dados
+O arquivo com a modelagem e manipulação do banco de dados está disponível em: [modelagem.sql](./modelagem.sql)
+
+
 ---
 
 📧 Desenvolvido por **Joyce Hellen Rodrigues Costa** – [LinkedIn](https://www.linkedin.com/in/joyce-hellen-rodrigues-costa/) | jhellencosta@gmail.com
