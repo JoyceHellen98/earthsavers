@@ -25,6 +25,12 @@ Criar uma plataforma que incentive a realização de pequenas ações ambientais
 - **Tailwind CSS** foi escolhido por sua praticidade, leveza e excelente suporte à responsividade.
 - A estrutura semântica com HTML garante acessibilidade e facilita a manutenção futura do projeto.
 - A interface foi pensada com foco em clareza visual, simplicidade e engajamento imediato do usuário.
+- 
+## Diagrama Entidade-Relacionamento (ER)
+O diagrama abaixo representa a modelagem do banco de dados do projeto:
+
+![Diagrama ER](diagrama-er-earthsavers.png)
+
 
 ## 📷 Captura de Tela
 
