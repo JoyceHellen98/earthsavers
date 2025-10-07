@@ -1,3 +1,5 @@
+-- Commit separado: manipulacao.sql
+
 -- Inseririndo locais
 INSERT INTO Local (nome, cidade, estado) VALUES ('Parque Estadual', 'Campo Grande', 'MS');
 

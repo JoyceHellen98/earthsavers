@@ -1,3 +1,4 @@
+<!-- Commit separado: README.md -->
 # 🌍 Earth Savers
 
 Earth Savers é uma aplicação web com o objetivo de mobilizar pessoas ao redor do mundo para realizar ações ambientais colaborativas. A interface inicial foi desenvolvida como parte de uma atividade acadêmica sobre construção de aplicações dinâmicas com frameworks modernos.

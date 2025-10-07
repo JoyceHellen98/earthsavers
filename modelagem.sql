@@ -1,3 +1,5 @@
+-- Commit separado: modelagem.sql
+
 -- Criação das tabelas
 CREATE TABLE Usuario (
     id_usuario INTEGER PRIMARY KEY,
