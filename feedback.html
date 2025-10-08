@@ -1,58 +1,192 @@
-<script>
-  const form = document.getElementById('feedbackForm');
-  const feedbackList = document.getElementById('feedbackList');
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback — Earth Savers</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #2f8f2f;
+      padding: 1rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    header nav a {
+      color: white;
+      margin-right: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    header nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin-top: 0;
+      color: #267a26;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      color: #555;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+    input[type="text"], input[type="email"], select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    button {
+      background-color: #2f8f2f;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #267a26;
+    }
+    .home-btn {
+      display: block;
+      margin: 2rem auto 0;
+      background-color: #267a26;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .home-btn:hover {
+      background-color: #1f651f;
+    }
+    .feedback-list {
+      margin-top: 2rem;
+    }
+    .feedback-item {
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
+    }
+    .feedback-item:last-child {
+      border-bottom: none;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🌍 Earth Savers</div>
+    <nav>
+      <a href="./index.html">Início</a>
+      <a href="/acoes.html">Ações Realizadas</a>
+      <a href="/feedback.html">Feedback</a>
+    </nav>
+  </header>
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      type: form.type.value,
-      message: form.message.value,
-      date: new Date().toLocaleString()
-    };
+  <div class="container">
+    <h1>Deixe seu Feedback</h1>
+    <p>Seu feedback é muito importante para que possamos evoluir o Earth Savers.</p>
 
-    addFeedbackItem(data);
-    form.reset();
-  });
+    <form id="feedbackForm">
+      <label for="name">Nome ou Apelido</label>
+      <input type="text" id="name" name="name" required />
 
-  function addFeedbackItem(fb) {
-    const div = document.createElement('div');
-    div.classList.add('feedback-item');
-    div.innerHTML = `
-      <strong>${fb.name}</strong> — <em>${fb.type}</em><br />
-      <p>${fb.message}</p>
-      <small>${fb.date}</small>
-    `;
-    feedbackList.prepend(div);
-  }
-</script>
-<script>
-  const form = document.getElementById('feedbackForm');
-  const feedbackList = document.getElementById('feedbackList');
+      <label for="email">E-mail (opcional)</label>
+      <input type="email" id="email" name="email" />
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      type: form.type.value,
-      message: form.message.value,
-      date: new Date().toLocaleString()
-    };
+      <label for="type">Tipo de Feedback</label>
+      <select id="type" name="type">
+        <option value="sugestao">Sugestão</option>
+        <option value="elogio">Elogio</option>
+        <option value="critica">Crítica</option>
+      </select>
 
-    addFeedbackItem(data);
-    form.reset();
-  });
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message" required></textarea>
 
-  function addFeedbackItem(fb) {
-    const div = document.createElement('div');
-    div.classList.add('feedback-item');
-    div.innerHTML = `
-      <strong>${fb.name}</strong> — <em>${fb.type}</em><br />
-      <p>${fb.message}</p>
-      <small>${fb.date}</small>
-    `;
-    feedbackList.prepend(div);
-  }
-</script>
+      <button type="submit">Enviar</button>
+    </form>
+
+  <button onclick="window.location.href='./index.html'" class="home-btn">Voltar ao Início</button>
+
+    <div class="feedback-list" id="feedbackList"></div>
+  </div>
+
+  <footer>
+    &copy; 2025 Earth Savers. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const form = document.getElementById('feedbackForm');
+    const feedbackList = document.getElementById('feedbackList');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        type: form.type.value,
+        message: form.message.value,
+        date: new Date().toLocaleString()
+      };
+
+      addFeedbackItem(data);
+      form.reset();
+    });
+
+    function addFeedbackItem(fb) {
+      const div = document.createElement('div');
+      div.classList.add('feedback-item');
+      div.innerHTML = `
+        <strong>${fb.name}</strong> — <em>${fb.type}</em><br />
+        <p>${fb.message}</p>
+        <small>${fb.date}</small>
+      `;
+      feedbackList.prepend(div);
+    }
+  </script>
+</body>
+</ht
+:::
